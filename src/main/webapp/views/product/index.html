@@ -37,8 +37,8 @@
                     </td>
                     <td th:text="${products.status ? 'Active' : 'Inactive'}"></td>
                     <td>
-                        <a class="btn btn-primary">Edit</a>
-                        <a class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn xóa không?')">Delete</a>
+                        <a class="btn btn-primary" th:href="@{'product/update/'+${products.id}}">Edit</a>
+                        <a class="btn btn-danger" th:href="@{'product/delete/'+${products.id}}" onclick="return confirm('Bạn có chắc chắn xóa không?')">Delete</a>
                     </td>
                 </tr>
                 </tbody>
